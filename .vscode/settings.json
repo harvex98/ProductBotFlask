@@ -1,0 +1,18 @@
+{
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+                  {
+        "scope": "meta.function-call.generic.python",
+        "settings": {
+        "foreground": "#679fa7"
+                    }
+                  }
+                ]
+            },
+
+
+            "python.linting.pylamaEnabled": false,
+            "python.linting.pylintEnabled": false,
+            "python.linting.banditEnabled": true,
+            "python.linting.enabled": true
+}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{%block title %}Home{% endblock %}
+
+
+{% block content%}
+<div class="d-flex flex-row justify-content-between align-items-center">
+    <div class="p-2 mr-5">
+        <H1>ProductBot</H1>
+        <H4>Super charge your operations with data analytics</H4>
+        <br>
+        <p class="">
+            ProductBot is an inventory management system that can be used on any device that has a web browser. 
+            Create an account, upload your products, manage them as you need and get <strong>instant data feedback.</strong> It\'s that simple.
+            <br> <br>
+            ProductBot supports manual product entry, QR and SKU barcode scan entries. 
+            Scan any code, adjust the data as you need and add it to your inventory.
+        </p>
+    </div>
+    <div class="p-2 mr-l mt-5">
+        <img src="{{ url_for('static', filename='checkpluspackage.png') }}">
+    </div>
+</div>
+{% endblock %}

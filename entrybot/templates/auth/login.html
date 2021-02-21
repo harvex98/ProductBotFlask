@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{%block title %}Login{% endblock %}
+
+{% block navLinks %}
+
+{% endblock %}
+
+{% block content%}
+    <div class="">
+        <span class="align-middle">
+            <form method="post">
+                <div class="form-group">
+                    <label for="username">User name</label>
+                    <input class="form-control" name="username" placeholder="User name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-secondary" type="submit">Submit</button>
+                </div>
+            </form>
+        </span>
+    </div>
+{% endblock %}
