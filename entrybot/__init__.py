@@ -5,8 +5,9 @@ from flask import Flask
 def create_app():
     from entrybot.database.db import init_db
     from .authentication import auth
-    from .mainPage import index
-    from .mainPage import itemList
+    from entrybot.codebehind.index import index
+    from entrybot.codebehind.bot import itemList
+    from entrybot.codebehind.bot import metrics
 
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
@@ -24,5 +25,6 @@ def create_app():
     app.register_blueprint(index.bp)
     app.register_blueprint(auth.bp)
     app.register_blueprint(itemList.bp)
+    app.register_blueprint(metrics.bp)
     app.add_url_rule('/', endpoint='index')
     return app

@@ -9,4 +9,4 @@ bp = Blueprint('index', __name__)
 def index():
     userid = session.get('userid')
 
-    return render_template('itemList/index.html', userid=userid)
+    return render_template('index/index.html', userid=userid)

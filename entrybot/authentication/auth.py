@@ -27,10 +27,12 @@ def register():
             newUser = User(username, email)
             dbSession.add(newUser)
             dbSession.commit()
+
             return redirect(url_for('auth.login'))
 
         flash(error)
-    return render_template('auth/register.html')
+
+    return render_template('auth/register.html', userid=session.get('userid'))
 
 
 @bp.route('/login', methods=('GET', 'POST'))
@@ -50,13 +52,15 @@ def login():
             error = 'User not found'
         if error is None:
             session['userid'] = userRequesting.id
+
             return redirect(url_for('itemList.itemList'))
 
-    return render_template('auth/login.html')
+    return render_template('auth/login.html', userid=session.get('userid'))
 
 
 @bp.route('/logout')
 def logout():
     session.pop('userid', None)
     flash('You were logged out')
+
     return redirect(url_for('index.index'))

@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Float, Date
-from entrybot.database import Base
+from entrybot.database.db import Base
 
 
 class Sale(Base):
